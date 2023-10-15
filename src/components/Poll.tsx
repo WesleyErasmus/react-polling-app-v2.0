@@ -1,15 +1,12 @@
 import { useState } from "react";
 import "../styles/poll.css";
 
-// Ratio button vote options array
-const voteOptions = [
-  { value: "Python", label: "Python" },
-  { value: "JavaScript", label: "JavaScript" },
-  { value: "Go", label: "Go" },
-];
-
-const Poll = () => {
-
+const Poll = (props: {
+  heading: string;
+  option1: string;
+  option2: string;
+  option3: string;
+}) => {
   // Initialize a state variable to track the selected programming language. Set to an empty string
   const [selectedLanguage, setSelectedLanguage] = useState("");
 
@@ -18,43 +15,63 @@ const Poll = () => {
       {/* Poll form */}
       <form className="poll-form" action="">
         {/* Form heading */}
-        <div className="form-heading">
-          What programming languages do you use during interviews?
-        </div>
+        <div className="form-heading">{props.heading}</div>
 
         {/* Radio buttons container */}
         <div className="radio-buttons-flex-container">
-          {/* Mapping through voteOptions array to display each vote option */}
-          {voteOptions.map((option) => (
-            <label
-              key={option.value}
-              className={
-                selectedLanguage === option.value ? "selected-bold-font" : ""
-              }
-            >
-              {/* Conditional styling using a ternary operator to bold the label text if it is selected. Below is displayed as an if-else statement:
-              
-              if (selectedLanguage) {
-                  return "bold";
-                } else {
-                  return "";
-                }
-              */}
+          {/* Radio option 1 */}
+          <label
+            key={props.option1}
+            className={
+              selectedLanguage === props.option1 ? "selected-bold-font" : ""
+            }
+          >
+            <input
+              type="radio"
+              value={props.option1}
+              name="language"
+              checked={selectedLanguage === props.option1}
+              onChange={() => setSelectedLanguage(props.option1)}
+            />
+            {/* Label name */}
+            {props.option1}
+          </label>
 
-              <input
-                type="radio"
-                value={option.value}
-                name="language"
-                checked={selectedLanguage === option.value}
-                // The checked attribute is set based on whether the selectedLanguage matches the value of that radio button
+          {/* Radio option 2 */}
+          <label
+            key={props.option2}
+            className={
+              selectedLanguage === props.option2 ? "selected-bold-font" : ""
+            }
+          >
+            <input
+              type="radio"
+              value={props.option2}
+              name="language"
+              checked={selectedLanguage === props.option2}
+              onChange={() => setSelectedLanguage(props.option2)}
+            />
+            {/* Label name */}
+            {props.option2}
+          </label>
 
-                onChange={() => setSelectedLanguage(option.value)}
-                // When a radio button is selected, the onChange event triggers the corresponding setter function (setSelectedLanguage) to update the state with the new option.value selected language.
-              />
-              {/* Label name */}
-              {option.label}
-            </label>
-          ))}
+          {/* Radio option 3 */}
+          <label
+            key={props.option3}
+            className={
+              selectedLanguage === props.option3 ? "selected-bold-font" : ""
+            }
+          >
+            <input
+              type="radio"
+              value={props.option3}
+              name="language"
+              checked={selectedLanguage === props.option3}
+              onChange={() => setSelectedLanguage(props.option3)}
+            />
+            {/* Label name */}
+            {props.option3}
+          </label>
         </div>
 
         {/* Form footer */}
