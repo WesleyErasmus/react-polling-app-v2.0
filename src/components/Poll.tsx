@@ -21,7 +21,6 @@ const Poll = (props: {
         <div className="radio-buttons-flex-container">
           {/* Radio option 1 */}
           <label
-            key={props.option1}
             className={
               selectedLanguage === props.option1 ? "selected-bold-font" : ""
             }
@@ -39,7 +38,6 @@ const Poll = (props: {
 
           {/* Radio option 2 */}
           <label
-            key={props.option2}
             className={
               selectedLanguage === props.option2 ? "selected-bold-font" : ""
             }
@@ -57,7 +55,6 @@ const Poll = (props: {
 
           {/* Radio option 3 */}
           <label
-            key={props.option3}
             className={
               selectedLanguage === props.option3 ? "selected-bold-font" : ""
             }
