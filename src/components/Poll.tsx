@@ -8,7 +8,7 @@ const Poll = (props: {
   option3: string;
 }) => {
   // Initialize a state variable to track the selected programming language. Set to an empty string
-  const [selectedLanguage, setSelectedLanguage] = useState("");
+  const [selectedValue, setSelectedValue] = useState("");
 
   return (
     <>
@@ -22,15 +22,15 @@ const Poll = (props: {
           {/* Radio option 1 */}
           <label
             className={
-              selectedLanguage === props.option1 ? "selected-bold-font" : ""
+              selectedValue === props.option1 ? "selected-bold-font" : ""
             }
           >
             <input
               type="radio"
               value={props.option1}
               name="language"
-              checked={selectedLanguage === props.option1}
-              onChange={() => setSelectedLanguage(props.option1)}
+              checked={selectedValue === props.option1}
+              onChange={() => setSelectedValue(props.option1)}
             />
             {/* Label name */}
             {props.option1}
@@ -39,15 +39,15 @@ const Poll = (props: {
           {/* Radio option 2 */}
           <label
             className={
-              selectedLanguage === props.option2 ? "selected-bold-font" : ""
+              selectedValue === props.option2 ? "selected-bold-font" : ""
             }
           >
             <input
               type="radio"
               value={props.option2}
               name="language"
-              checked={selectedLanguage === props.option2}
-              onChange={() => setSelectedLanguage(props.option2)}
+              checked={selectedValue === props.option2}
+              onChange={() => setSelectedValue(props.option2)}
             />
             {/* Label name */}
             {props.option2}
@@ -56,15 +56,15 @@ const Poll = (props: {
           {/* Radio option 3 */}
           <label
             className={
-              selectedLanguage === props.option3 ? "selected-bold-font" : ""
+              selectedValue === props.option3 ? "selected-bold-font" : ""
             }
           >
             <input
               type="radio"
               value={props.option3}
               name="language"
-              checked={selectedLanguage === props.option3}
-              onChange={() => setSelectedLanguage(props.option3)}
+              checked={selectedValue === props.option3}
+              onChange={() => setSelectedValue(props.option3)}
             />
             {/* Label name */}
             {props.option3}
