@@ -1,0 +1,81 @@
+/* Styling applies to all 'label' semantic HTML tags */
+label {
+    padding: 7px 0;
+    display: flex;
+    align-items: center;
+    font-size: calc(11px + 0.2rem);
+    font-weight: 500;
+}
+
+/* Radio button custom inner styling applies to all 'radio' type inputs */
+input[type="radio"] {
+    /* Hides default radio button  */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    outline: none;
+    border: 1px solid lightgrey;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+/* Radio button custom inner styling applies to all 'radio' type inputs */
+input[type="radio"]:checked::before {
+    /* Adds the custom check inside the radio button  */
+    content: "✔";
+    display: block;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+}
+
+/* Poll form container */
+.poll-form {
+    position: relative;
+    width: 620px;
+    padding: 16px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: var(--poll-box-shadow);
+}
+
+/* Form heading */
+.form-heading {
+    margin-bottom: 10px;
+    font-size: calc(11px + 0.2rem);
+    font-weight: bolder;
+}
+
+/* Form radio buttons flex container */
+.radio-buttons-flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.selected-bold-font {
+    font-weight: bold;
+}
+
+/* Form footer. Contains, submit btn, voter profile images, and vote details */
+.form-footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Form submit input button */
+.form-submit-btn {
+    background: var(--primary-color);
+    border: none;
+    padding: 9px 15px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: calc(10px + 0.2rem);
+    line-height: 1;
+    margin: 0;
+}

@@ -1,0 +1,31 @@
+.vote-img-details-flex-container {
+    display: flex;
+    align-items: center;
+    margin-top: 17px;
+    margin-left: 12px;
+}
+
+.voter-profile-img {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    /* Using object fit property to scale and crop images to maintain their aspect ratios */
+    object-fit: cover;
+
+    margin-left: -12px;
+    border: 2px solid white;
+}
+
+.total-votes,
+.days-left {
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-block;
+    margin: 0 8px;
+    color: #7A7A7A;
+}
+
+.dot-divider {
+    color: #7A7A7A;
+    font-weight: bold;
+}
