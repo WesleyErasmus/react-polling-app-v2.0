@@ -54,7 +54,6 @@ input[type="radio"]:checked::before {
 .radio-buttons-flex-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 17px;
 }
 
 .selected-bold-font {
@@ -79,31 +78,4 @@ input[type="radio"]:checked::before {
     font-size: calc(10px + 0.2rem);
     line-height: 1;
     margin: 0;
-}
-
-.vote-img-details-flex-container {
-    display: flex;
-    align-items: center;
-}
-
-.voter-profile-img-placeholder {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    /* Using object fit property to scale and crop images to maintain their aspect ratios */
-    object-fit: cover;
-}
-
-.total-votes,
-.days-left {
-    font-size: 13px;
-    font-weight: 500;
-    display: inline-block;
-    margin: 0 8px;
-    color: #7A7A7A;
-}
-
-.dot-divider {
-    color: #7A7A7A;
-    font-weight: bold;
 }

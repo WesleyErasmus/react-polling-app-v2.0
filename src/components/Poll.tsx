@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/poll.css";
+import VoteDetails from "./VoteDetails";
 
 const Poll = (props: {
   heading: string;
@@ -73,22 +74,9 @@ const Poll = (props: {
 
         {/* Form footer */}
         <div className="form-footer-container">
-          {/* User profile container */}
-          <div className="vote-img-details-flex-container">
-            {/* Voter profile image placeholder */}
-            <img
-              className="voter-profile-img-placeholder"
-              src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80"
-              alt="voter profile images placeholder"
-            />
-            {/* Votes Details */}
-            <div className="voteDetails">
-              <div className="total-votes">Total Votes: 24</div>
-              {/* Press and hold the Alt key, then type 0183 in the numeric keypad to type the dot character */}
-              <span className="dot-divider">·</span>
-              <div className="days-left">5 Days Left</div>
-            </div>
-          </div>
+          
+          {/* Vote details component */}
+          <VoteDetails />
 
           {/* Vote Button */}
           <div>

@@ -1,4 +1,5 @@
 import Poll from "../components/Poll";
+import Responses from "../components/Responses";
 
 const HomePage = () => {
   return (
@@ -11,6 +12,8 @@ const HomePage = () => {
         option2={"Python"}
         option3={"Go"}
       />
+
+      <Responses heading="What programming language do you use during the coding interview?" />
     </div>
   );
 };
